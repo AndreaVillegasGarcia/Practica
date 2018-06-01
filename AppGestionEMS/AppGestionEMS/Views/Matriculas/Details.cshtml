@@ -1,0 +1,42 @@
+﻿@model AppGestionEMS.Models.Matriculas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Matriculas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.curso.NombreCurso)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.curso.NombreCurso)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.grupoClase.aula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.grupoClase.aula)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.fechaMatricula)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.fechaMatricula)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

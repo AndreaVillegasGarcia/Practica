@@ -25,6 +25,7 @@
     <UseGlobalApplicationHostFile />
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -198,8 +199,10 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AsignacionDocentesController.cs" />
     <Compile Include="Controllers\CursosController.cs" />
+    <Compile Include="Controllers\GrupoClasesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MatriculasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -215,12 +218,22 @@
     <Compile Include="Migrations\201805311659103_CreateAsignacionDocente.Designer.cs">
       <DependentUpon>201805311659103_CreateAsignacionDocente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201806011449571_CreateGrupoClases.cs" />
+    <Compile Include="Migrations\201806011449571_CreateGrupoClases.Designer.cs">
+      <DependentUpon>201806011449571_CreateGrupoClases.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201806011457128_CreateMatriculas.cs" />
+    <Compile Include="Migrations\201806011457128_CreateMatriculas.Designer.cs">
+      <DependentUpon>201806011457128_CreateMatriculas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\AsignacionDocentes.cs" />
     <Compile Include="Models\Cursos.cs" />
+    <Compile Include="Models\GrupoClases.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Matriculas.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -292,6 +305,16 @@
     <Content Include="Views\AsignacionDocentes\Details.cshtml" />
     <Content Include="Views\AsignacionDocentes\Edit.cshtml" />
     <Content Include="Views\AsignacionDocentes\Index.cshtml" />
+    <Content Include="Views\GrupoClases\Create.cshtml" />
+    <Content Include="Views\GrupoClases\Delete.cshtml" />
+    <Content Include="Views\GrupoClases\Details.cshtml" />
+    <Content Include="Views\GrupoClases\Edit.cshtml" />
+    <Content Include="Views\GrupoClases\Index.cshtml" />
+    <Content Include="Views\Matriculas\Create.cshtml" />
+    <Content Include="Views\Matriculas\Delete.cshtml" />
+    <Content Include="Views\Matriculas\Details.cshtml" />
+    <Content Include="Views\Matriculas\Edit.cshtml" />
+    <Content Include="Views\Matriculas\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -313,6 +336,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201805311659103_CreateAsignacionDocente.resx">
       <DependentUpon>201805311659103_CreateAsignacionDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806011449571_CreateGrupoClases.resx">
+      <DependentUpon>201806011449571_CreateGrupoClases.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201806011457128_CreateMatriculas.resx">
+      <DependentUpon>201806011457128_CreateMatriculas.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
