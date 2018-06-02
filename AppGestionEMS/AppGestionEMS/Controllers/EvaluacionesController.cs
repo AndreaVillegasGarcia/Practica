@@ -10,7 +10,7 @@ using AppGestionEMS.Models;
 
 namespace AppGestionEMS.Controllers
 {
-    [Authorize(Roles = "admin")]
+    [Authorize(Roles = "profesor")]
     public class EvaluacionesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -46,11 +46,11 @@ namespace AppGestionEMS.Controllers
         }
 
         // POST: Evaluaciones/Create
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,CursoId,UserId,Convocatoria,Problema1,Problema2,Problema3,Practica")] Evaluaciones evaluaciones)
+        public ActionResult Create([Bind(Include = "Id,CursoId,UserId,Convocatoria,problema1,problema2,problema3,Practica")] Evaluaciones evaluaciones)
         {
             if (ModelState.IsValid)
             {
@@ -82,11 +82,11 @@ namespace AppGestionEMS.Controllers
         }
 
         // POST: Evaluaciones/Edit/5
-        // Para protegerse de ataques de publicación excesiva, habilite las propiedades específicas a las que desea enlazarse. Para obtener 
-        // más información vea http://go.microsoft.com/fwlink/?LinkId=317598.
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,CursoId,UserId,Convocatoria,Problema1,Problema2,Problema3,Practica")] Evaluaciones evaluaciones)
+        public ActionResult Edit([Bind(Include = "Id,CursoId,UserId,Convocatoria,problema1,problema2,problema3,Practica")] Evaluaciones evaluaciones)
         {
             if (ModelState.IsValid)
             {

@@ -204,7 +204,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MatriculasController.cs" />
-    <Compile Include="Controllers\MisEvaluaciones.cs" />
+    <Compile Include="Controllers\MisEvaluacionesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -228,9 +228,9 @@
     <Compile Include="Migrations\201806011457128_CreateMatriculas.Designer.cs">
       <DependentUpon>201806011457128_CreateMatriculas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201806011934028_CreateEvaluaciones.cs" />
-    <Compile Include="Migrations\201806011934028_CreateEvaluaciones.Designer.cs">
-      <DependentUpon>201806011934028_CreateEvaluaciones.cs</DependentUpon>
+    <Compile Include="Migrations\201806021454444_CreateEvaluaciones.cs" />
+    <Compile Include="Migrations\201806021454444_CreateEvaluaciones.Designer.cs">
+      <DependentUpon>201806021454444_CreateEvaluaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -327,7 +327,10 @@
     <Content Include="Views\Evaluaciones\Details.cshtml" />
     <Content Include="Views\Evaluaciones\Edit.cshtml" />
     <Content Include="Views\Evaluaciones\Index.cshtml" />
+    <Content Include="Views\MisEvaluaciones\Create.cshtml" />
+    <Content Include="Views\MisEvaluaciones\Delete.cshtml" />
     <Content Include="Views\MisEvaluaciones\Details.cshtml" />
+    <Content Include="Views\MisEvaluaciones\Edit.cshtml" />
     <Content Include="Views\MisEvaluaciones\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -357,8 +360,8 @@
     <EmbeddedResource Include="Migrations\201806011457128_CreateMatriculas.resx">
       <DependentUpon>201806011457128_CreateMatriculas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201806011934028_CreateEvaluaciones.resx">
-      <DependentUpon>201806011934028_CreateEvaluaciones.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201806021454444_CreateEvaluaciones.resx">
+      <DependentUpon>201806021454444_CreateEvaluaciones.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

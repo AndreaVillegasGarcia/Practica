@@ -11,15 +11,15 @@ using Microsoft.AspNet.Identity;
 
 namespace AppGestionEMS.Controllers
 {
-    [Authorize (Roles = "alumno")]
-    public class MisEvaluaciones : Controller
+    [Authorize(Roles = "alumno")]
+    public class MisEvaluacionesController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: MisEvaluaciones
         public ActionResult Index()
         {
-            String currentUserId = User.Identity.GetUserId();
+            string currentUserId = User.Identity.GetUserId();
             var evaluaciones = db.Evaluaciones.Include(e => e.Curso).Include(e => e.User).Where(p => p.UserId == currentUserId);
             return View(evaluaciones.ToList());
         }
@@ -39,5 +39,6 @@ namespace AppGestionEMS.Controllers
             return View(evaluaciones);
         }
 
+       
     }
 }

@@ -15,9 +15,9 @@ namespace AppGestionEMS.Migrations
                         CursoId = c.Int(nullable: false),
                         UserId = c.String(maxLength: 128),
                         Convocatoria = c.Int(nullable: false),
-                        Problema1 = c.Int(nullable: false),
-                        Problema2 = c.Int(nullable: false),
-                        Problema3 = c.Int(nullable: false),
+                        problema1 = c.Int(nullable: false),
+                        problema2 = c.Int(nullable: false),
+                        problema3 = c.Int(nullable: false),
                         Practica = c.Int(nullable: false),
                     })
                 .PrimaryKey(t => t.Id)

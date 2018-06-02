@@ -13,22 +13,17 @@ namespace AppGestionEMS.Models
             Ordinaria,
             Extraordinaria
         }
-
         public int Id { get; set; }
-
         [Display(Name = "Curso")]
         public int CursoId { get; set; }
         public virtual Cursos Curso { get; set; }
-
         [Display(Name = "Alumno")]
-        public String UserId { get; set; }
+        public string UserId { get; set; }
         public virtual ApplicationUser User { get; set; }
-
         public ConvocatoriaType Convocatoria { get; set; }
-        public int Problema1 { get; set; }
-        public int Problema2 { get; set; }
-        public int Problema3 { get; set; }
+        public int problema1 { get; set; }
+        public int problema2 { get; set; }
+        public int problema3 { get; set; }
         public int Practica { get; set; }
-
     }
 }
