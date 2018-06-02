@@ -10,8 +10,10 @@ namespace AppGestionEMS.Models
         public int Id { get; set; }
         public int grupoClaseId { get; set; }
         public int cursoId { get; set; }
+        public int userId { get; set; }
         public virtual GrupoClases grupoClase { get; set; }
         public virtual Cursos curso { get; set; }
         public String fechaMatricula { get; set; }
+        public virtual ApplicationUser applicationUser { get; set; }
     }
 }

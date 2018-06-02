@@ -7,11 +7,9 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using AppGestionEMS.Models;
-using Microsoft.AspNet.Identity;
 
 namespace AppGestionEMS.Controllers
 {
-    [Authorize (Roles = "admin")]
     public class MatriculasController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
@@ -51,7 +49,7 @@ namespace AppGestionEMS.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,grupoClaseId,cursoId,fechaMatricula")] Matriculas matriculas)
+        public ActionResult Create([Bind(Include = "Id,grupoClaseId,cursoId,userId,fechaMatricula")] Matriculas matriculas)
         {
             if (ModelState.IsValid)
             {
@@ -87,7 +85,7 @@ namespace AppGestionEMS.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Id,grupoClaseId,cursoId,fechaMatricula")] Matriculas matriculas)
+        public ActionResult Edit([Bind(Include = "Id,grupoClaseId,cursoId,userId,fechaMatricula")] Matriculas matriculas)
         {
             if (ModelState.IsValid)
             {
@@ -134,7 +132,5 @@ namespace AppGestionEMS.Controllers
             }
             base.Dispose(disposing);
         }
-
-
     }
 }
